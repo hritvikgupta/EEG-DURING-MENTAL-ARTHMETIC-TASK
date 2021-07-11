@@ -1,17 +1,28 @@
 # EEG-DURING-MENTAL-ARTHMETIC-TASK
 RESEARCH PROJECT, AIM IS TO CLASSIFY THE EEG SIGNALS DURING THE REST STATE AND MENTAL ARITHMETIC TASK STATE
 
-## objective: To Classify Active state and Inactive state of the signal using raw EEG dataset
+objective: To Classify Active state and Inactive state of the signal using raw EEG dataset
 
-### Dataset:  16 subjects loaded: each subect correspond to 2 file: before arthmetic task(3 min) raw EEG signals and during arthmetic task raw EEG signals(1min)
+Dataset:  16 subjects loaded: each subect correspond to 2 file: before arthmetic task(3 min) raw EEG signals and during arthmetic task raw EEG signals(1min)
 
-### Input: 21 features corresponding to 90k rows therefore final dataset size is 90k*21
+Input: 21 features corresponding to 90k rows therefore final dataset size is 90k*21
 
-### output: labels 0, 1 active or inactive respectively
+output: labels 0, 1 active or inactive respectively
 
-### 3 models were tested in this experiment:
-
+3 models were tested in this experiment:
    -1) LSTM MODEL
    -2) BIDIRECTIONAL LSTM 
    -3) LSTM WITH ATTENTION
+   
+
+DATA PREPROCESSING
+1) DATA RESAMPLLING:-  3 MIN DATA(WHICH IS OF BEFORE ARTHMETIC TASK) IS RESAMPLED INTO THE 1 MIN DATA, THEREFORE  90K ROWS CONVERTED INTO THE 30K
+                       
+2) DATA LABELLING: RESAMPLED DATA WHIHC IS OF BEFORE ARTHMETIC TASK IS RESAMPLED IS LABELLED 0 AND THE ARTH-MATIC TASK DATA OF 1MIN IS LABELLED 1
+
+3) DATA CONCATATING: BOTH THE DATA OF THE BEFORE ARTHMETIC TASK DATA AND THE AFTER ARTHMETIC TASK DATA IS CONCATED TO FORM THE FINAL DATA THAT IS TO BE FED TO THE MODEL
+
+4) TRAIN_TEST_VALIDATION SPLIT:- USED THE TENSORFLOW DATASET.API FUNCTION TO CREATE THE DATSET.
+                                 THEN GIVEN THE SPLIT OF THE 70/15/15
+           
    
