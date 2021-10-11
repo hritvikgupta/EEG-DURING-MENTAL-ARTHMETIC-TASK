@@ -1,4 +1,4 @@
-# EEG-DURING-MENTAL-ARTHMETIC-TASK
+# Analyzing of EEG signals Using Deep neural networks
 RESEARCH PROJECT, AIM IS TO CLASSIFY THE EEG SIGNALS DURING THE REST STATE AND MENTAL ARITHMETIC TASK STATE
 
 objective: To Classify Active state and Inactive state of the signal using raw EEG dataset
